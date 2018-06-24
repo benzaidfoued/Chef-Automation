@@ -10,6 +10,8 @@ package 'apache2' do
 end
 
 service 'apache2' do
-     servcie_name 'httpd'
+     service_name 'httpd'
      action [:start, :enable]
 end
+
+include_recipe 'apache::website'
